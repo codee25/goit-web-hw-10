@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Цитати</title>
+</head>
+<body>
+    <h1>Список цитат</h1>
+    <hr>
+
+    {% for q in quotes %}
+        <div style="margin-bottom: 20px; border-left: 5px solid #ccc; padding-left: 10px;">
+            <p><strong>"{{ q.quote }}"</strong></p>
+            <p>Автор: <a href="/author/{{ q.author.id }}">{{ q.author.fullname }}</a></p>
+            <p>Теги: <i>{{ q.tags }}</i></p>
+        </div>
+    {% empty %}
+        <p>Цитат поки немає.</p>
+    {% endfor %}
+
+    <hr>
+    {% if user.is_authenticated %}
+        <p>Ви увійшли як: {{ user.username }} | <a href="/users/logout/">Вийти</a></p>
+    {% else %}
+        <p><a href="/users/signup/">Зареєструватися</a> | <a href="/users/login/">Увійти</a></p>
+    {% endif %}
+</body>
+</html>

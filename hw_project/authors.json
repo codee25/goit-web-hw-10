@@ -1,0 +1,14 @@
+[
+  {
+    "fullname": "Albert Einstein",
+    "born_date": "March 14, 1879",
+    "born_location": "in Ulm, Germany",
+    "description": "Albert Einstein was a German-born theoretical physicist."
+  },
+  {
+    "fullname": "J.K. Rowling",
+    "born_date": "July 31, 1965",
+    "born_location": "in Yate, South Gloucestershire, England",
+    "description": "Joanne Rowling is a British novelist, best known for Harry Potter."
+  }
+]
